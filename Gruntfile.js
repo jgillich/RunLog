@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     bundleOptions: {
                         debug: true
                     },
-                    transform: ['es6ify']
+                    transform: ['es6ify', 'domthingify']
                 }
             }
         },
