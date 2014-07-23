@@ -4,3 +4,9 @@
 .bar-footer-secondary {
     height: 88px;
 }
+
+/*  Ratchet uses '.bar-nav ~ .content',
+    which doesn't work because .content is wrapped in a div */
+.content {
+    padding-top: 44px;
+}
