@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         browserify: {
             app: {
                 files: {
-                    'build/app.js': ['lib/app.js']
+                    'build/app.js': ['app.js']
                 },
                 options: {
                     bundleOptions: {
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         copy: {
             index: {
                 files: {
-                    'build/index.html': 'index.html'
+                    'build/index.html': 'app.html'
                 }
             },
             fonts: {
