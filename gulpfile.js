@@ -3,6 +3,7 @@ var gulp        = require('gulp'),
     rework      = require('gulp-rework'),
     rename      = require('gulp-rename'),
     livereload  = require('gulp-livereload'),
+    svg2png     = require('gulp-svg2png')
     rimraf      = require('rimraf'),
     connect     = require('connect'),
     serveStatic = require('serve-static'),
@@ -36,6 +37,10 @@ gulp.task('html', function () {
     return gulp.src('app.html').pipe(rename('index.html')).pipe(gulp.dest('build/'));
 });
 
+gulp.task('icon', function () {
+    return gulp.src('icon.svg').pipe(svg2png()).pipe(gulp.dest('build/'));
+});
+
 gulp.task('fonts', function () {
     return gulp.src('./node_modules/ratchet/dist/fonts/*').pipe(gulp.dest('build/fonts/'));
 });
@@ -45,7 +50,7 @@ gulp.task('rimraf', function (callback) {
 });
 
 gulp.task('build', function (callback) {
-    runSequence('rimraf', ['js', 'css', 'html', 'fonts'], callback);
+    runSequence('rimraf', ['js', 'css', 'html', 'fonts', 'icon'], callback);
 });
 
 gulp.task('watch', function() {
