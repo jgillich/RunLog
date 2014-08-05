@@ -1,3 +1,5 @@
+require('./polyfills');
+
 document.addEventListener('DOMContentLoaded', function() {
 
     var Router  = require('./lib/router'),
