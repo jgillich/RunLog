@@ -37,7 +37,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('fonts', function () {
-    return gulp.src('./vendor/ratchet/fonts/*').pipe(gulp.dest('build/fonts/'));
+    return gulp.src('./node_modules/ratchet/dist/fonts/*').pipe(gulp.dest('build/fonts/'));
 });
 
 gulp.task('rimraf', function (callback) {

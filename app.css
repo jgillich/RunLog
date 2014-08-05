@@ -1,4 +1,4 @@
-@import './vendor/ratchet/css/ratchet.css';
+@import './node_modules/ratchet/dist/css/ratchet.css';
 @import 'node_modules/leaflet/dist/leaflet.css';
 
 .bar-footer-secondary {
