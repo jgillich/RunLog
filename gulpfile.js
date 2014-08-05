@@ -12,7 +12,7 @@ var gulp        = require('gulp'),
     reworkImport = require('rework-import');
 
 gulp.task('js', function () {
-    gulp.src('app.js')
+    return gulp.src('app.js')
         .pipe(browserify({
             transform: ['es6ify'],
             debug : true
@@ -55,6 +55,6 @@ gulp.task('watch', function() {
     gulp.watch('app.*', ['build']);
 });
 
-gulp.task('dev', ['watch'], function(callback) {
+gulp.task('dev', ['watch', 'build'], function(callback) {
     connect().use(serveStatic('build/')).listen(process.env.PORT || 8080, callback);
 });
