@@ -1,12 +1,6 @@
-@import './node_modules/ratchet/dist/css/ratchet.css';
+@import 'node_modules/ratchet/dist/css/ratchet.css';
 @import 'node_modules/leaflet/dist/leaflet.css';
 
 .bar-footer-secondary {
     height: 88px;
-}
-
-/*  Ratchet uses '.bar-nav ~ .content',
-    which doesn't work because .content is wrapped in a div */
-.content {
-    padding-top: 44px;
 }
