@@ -9,8 +9,8 @@ var gulp        = require('gulp'),
     serveStatic = require('serve-static'),
     runSequence = require('run-sequence'),
     myth        = require('myth'),
-    reworkUrl   = require('rework-plugin-url'),
-    reworkImport = require('rework-import');
+    url         = require('rework-plugin-url'),
+    imprt       = require('rework-import');
 
 gulp.task('js', function () {
     return gulp.src('app.js')
@@ -25,9 +25,9 @@ gulp.task('css', function () {
     return gulp.src('app.css')
         .pipe(
             rework(
-                reworkImport(),
+                imprt(),
                 myth(),
-                reworkUrl(function (url) { return url.replace('../fonts/ratchicons', './fonts/ratchicons'); })
+                url(function (url) { return url.replace('../fonts/ratchicons', './fonts/ratchicons'); })
             )
         )
         .pipe(gulp.dest('build/'));
