@@ -1,4 +1,4 @@
-require('./polyfills');
+require('string.prototype.contains');
 
 document.addEventListener('DOMContentLoaded', function() {
 
