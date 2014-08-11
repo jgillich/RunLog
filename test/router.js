@@ -1,10 +1,9 @@
 var test = require('tape');
 
 test('render track', function (t) {
-    location.hash = '#track';
     setTimeout(function () {
-        t.ok(document.querySelector('.content') !== null, 'content exists');
-        t.ok(document.querySelector('#map') !== null, 'map exists');
+        t.equal(document.querySelectorAll('.content').length, 1, 'content exists');
+        t.equal(document.querySelectorAll('#map').length, 1, 'map exists');
         t.end();
     }, 0);
 });
